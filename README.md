@@ -104,7 +104,7 @@ torow и stat.
 
 <span style="color:Blue">
 
-Качество полученной модели бленндинга по метрике $ROC AUC$:
+Качество полученной модели блендинга по метрике $ROC AUC$:
 - на тренировочном наборе: $ROC AUC = 0.757$;
 - на валидационном наборе: $ROC AUC = 0.765$;
 - на отложенном наборе: $ROC AUC = 0.756$;
@@ -147,18 +147,20 @@ torow и stat.
 
 ## Структура проекта
 
-
-* [project-2.ipynb](https://github.com/Wiruto/Skillfactory_project_2/blob/3901bf3492a2d94717cd0a2ebff4cda4017c6890/Project-2.ipynb) - jupyter-ноутбук, содержащий основной код проекта.
-* 
+* Images/ - папка с используемыми изображениями;
+* [Notebook_v13.ipynb](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/master/Notebook_v13.ipynb) - jupyter-ноутбук, содержащий основной код проекта;
+* README.md - краткое описание проекта;
+* optuna_studies.db - результаты оптимизации моделей;
+* requirements.txt - файл используемых библиотек и зависимостей.
 
 ## Используемые зависимости
 
-Используемые зависимости предствалены в файле: [requirements.txt]()
+Используемые библиотеки и зависимости представлены в файле: [requirements.txt](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/master/requirements.txt)
 
 ## Установка проекта
 
 ```
-git clone https://github.com/Wiruto/skillfactory_project_2.git
+git clone https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank
 
 ```
 
