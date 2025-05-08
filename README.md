@@ -1,4 +1,4 @@
-<center> <img src = "Images/logo.png" alt="drawing" style="width:400px;">
+<center> <img src = "img\logo.png" alt="drawing" style="width:400px;">
 
 <center> <span style="background-size: 600px;background:White;color:RED;font-size: 60px;font-family: Comic Sans MS">Кредитный скоринг Альфа банка</span>
 
@@ -100,7 +100,7 @@
 6. На третьем этапе построения блендинга метамодель обучится на метапризнаках пространства 
 $torow$ и $stat$.
 
-<center> <img src = "Images/Blending.jpg" alt="drawing" style="width:1400px;">
+<center> <img src = "img\Blending.jpg" alt="drawing" style="width:1400px;">
 
 
 ## Выводы
@@ -113,7 +113,7 @@ $torow$ и $stat$.
 - на отложенном наборе: $ROC$ $AUC = 0.756$;
 - на соревновательном ($kaggle$) наборе: $ROC$ $AUC = 0.743$;
 
-<center> <img src = "Images/Kaggle.png" alt="drawing" style="width:1400px;">
+<center> <img src = "img\kaggle.png" alt="drawing" style="width:1400px;">
 
 **Мероприятия по возможному улучшению качества модели:**
 
