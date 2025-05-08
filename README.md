@@ -121,7 +121,7 @@ $torow$ и $stat$.
 - Таблица с данными клиентов банка должна быть сохранена в формате csv.</li>
 
 Dataset c данными клиентов банка можно скачать в разделе [Data](https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data) 
-соревнования на платформе Kaggle или на GitHub репозитории автора блендинга: [client_data.csv](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/9d2d6349804d9284dcfcb34f695e4c014e679e16/data/client_data.csv))(сокращенный DataSet на 24 id клиента).
+соревнования на платформе Kaggle или на GitHub репозитории автора блендинга: [client_data.csv](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/9d2d6349804d9284dcfcb34f695e4c014e679e16/data/client_data.csv) (сокращенный DataSet на 24 id клиента).
 
 Для выполения кредитного скоринга клиентов банка необходимо сохранить Dataset данными клинетов в любой директории компьютера и выберите его с помощью формы представленной на сервере.
 
