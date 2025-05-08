@@ -106,7 +106,7 @@ $torow$ и $stat$.
 
 ## Подготовка модели к продакшену
 
-Функционал результрующего блендинга "упакован" в файл [blending.py](blending.py).
+Функционал результирующего блендинга "упакован" в файл [blending.py](blending.py).
 Артефакты необходимые для работы блендинга blending.py находится в каталоге [models](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/tree/c3145cde389ff71dd62726f81c0aeff6f9ca6c5b/PROD%20server/models).
 Для воспроизведения работы блендинга необходимо, чтобы каталог models и файл blending.py находились в одной директории.
 
@@ -141,10 +141,6 @@ docker pull kolobovviktor/blending_alpha_bank
 ```
 docker run -it --rm --name=server_container -p=8000:8000 blending_alpha_bank
 ```
-
-
-
-
 
 ## Выводы
 
