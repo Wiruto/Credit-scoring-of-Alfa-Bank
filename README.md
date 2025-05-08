@@ -112,18 +112,17 @@ $torow$ и $stat$.
 
 ## Деплой модели
 
-С помощью фреймворка Flask блендинг был развернут на сервере [server.py](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/c3145cde389ff71dd62726f81c0aeff6f9ca6c5b/PROD%20server/server.py), находящемся в директории [PROD server](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/tree/c3145cde389ff71dd62726f81c0aeff6f9ca6c5b/PROD%20server).
+С помощью фреймворка Flask блендинг был развернут на сервере [server.py](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/c3145cde389ff71dd62726f81c0aeff6f9ca6c5b/PROD%20server/server.py).
 При запуске сервера пользователь попадает на стартовую страницу, в которой представлена инструкция для корректной работы сервера и форма для выбора файла с данными клиентов банка.
 
 Инструкция включает в себя несколько правил:
 - Сервер должен быть запущен из корневой директори файла server.py;
-- Данные клиентов банка должны быть представлены в табличной форме, описанной в разделе
-            <a href="https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data">Data</a>
-  сорeвенования <a href="https://www.kaggle.com/competitions/alfa-bank-pd-credit-history">Kaggle</a> от Альфа Банка;
+- Данные клиентов банка должны быть представлены в табличной форме, описанной в разделе [Data](https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data)
+  сорeвенования [Data]([https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data](https://www.kaggle.com/competitions/alfa-bank-pd-credit-history) от Альфа Банка;
 - Таблица с данными клиентов банка должна быть сохранена в формате csv.</li>
 
-Dataset c данными клиентов банка можно скачать в разделе <a href="https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data">Data</a> 
-соревнования на платформе Kaggle или на GitHub репозитории автора блендинга: <a href="https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/372722316dc7f0346da4bbed9568b385d74fbfe1/data/client_data.csv">Wiruto</a>(сокращенный DataSet на 24 id клиента).
+Dataset c данными клиентов банка можно скачать в разделе [Data](https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data) 
+соревнования на платформе Kaggle или на GitHub репозитории автора блендинга: [Data]([https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/9d2d6349804d9284dcfcb34f695e4c014e679e16/data/client_data.csv))(сокращенный DataSet на 24 id клиента).
 
 Для выполения кредитного скоринга клиентов банка необходимо сохранить Dataset данными клинетов в любой директории компьютера и выберите его с помощью формы представленной на сервере.
 
