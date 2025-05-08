@@ -222,6 +222,6 @@ docker run -it --rm --name=server_container -p=8000:8000 blending_alpha_bank
 ## Автор
 
 * [Колобов Виктор Валерьевич](https://github.com/Wiruto)
-* [Телеграмм автора](https://t.me/wiruto)
+* [Telegram автора](https://t.me/wiruto)
 
 
