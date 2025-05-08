@@ -8,11 +8,13 @@
 3. [Принятые метрики](#принятые-метрики)
 4. [Постановка задачи в рамках EDA](#постановка-задачи-в-рамках-eda)
 5. [Постановка задачи в рамках Machine Learning](#постановка-задачи-в-рамках-machine-learning)
-6. [Выводы](#выводы)
-7. [Структура проекта](#структура-проекта)
-8. [Установка проекта](#установка-проекта)
-9. [Используемые зависимости](#используемые-зависимости)
-10. [Авторы](#авторы)
+6. [Подготовка модели к продакшену](#Подготовка-модели-к-продакшену)
+7. [Деплой модели](#Деплой-модели)
+8. [Воспроизводимость модели](#Воспроизводимость-модели)
+9. [Структура проекта](#структура-проекта)
+10. [Установка проекта](#установка-проекта)
+11. [Используемые зависимости](#используемые-зависимости)
+12. [Авторы](#авторы)
 
 
 ## Описание проекта
@@ -102,6 +104,47 @@ $torow$ и $stat$.
 
 <center> <img src = "img\Blending.jpg" alt="drawing" style="width:1400px;">
 
+## Подготовка модели к продакшену
+
+Функционал результрующего блендинга "упакован" в файл [blending.py](blending.py).
+Артефакты необходимые для работы блендинга blending.py находится в каталоге [models](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/tree/c3145cde389ff71dd62726f81c0aeff6f9ca6c5b/PROD%20server/models).
+Для воспроизведения работы блендинга необходимо, чтобы каталог models и файл blending.py находились в одной директории.
+
+## Деплой модели
+
+С помощью фреймворка Flask блендинг был развернут на сервере [server.py](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/c3145cde389ff71dd62726f81c0aeff6f9ca6c5b/PROD%20server/server.py), находящемся в директории [PROD server](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/tree/c3145cde389ff71dd62726f81c0aeff6f9ca6c5b/PROD%20server).
+При запуске сервера пользователь попадает на стартовую страницу, в которой представлена инструкция для корректной работы сервера и форма для выбора файла с данными клиентов банка.
+
+Инструкция включает в себя несколько правил:
+- Сервер должен быть запущен из корневой директори файла server.py;
+- Данные клиентов банка должны быть представлены в табличной форме, описанной в разделе
+            <a href="https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data">Data</a>
+  сорeвенования <a href="https://www.kaggle.com/competitions/alfa-bank-pd-credit-history">Kaggle</a> от Альфа Банка;
+- Таблица с данными клиентов банка должна быть сохранена в формате csv.</li>
+
+Dataset c данными клиентов банка можно скачать в разделе <a href="https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data">Data</a> 
+соревнования на платформе Kaggle или на GitHub репозитории автора блендинга: <a href="https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/372722316dc7f0346da4bbed9568b385d74fbfe1/data/client_data.csv">Wiruto</a>(сокращенный DataSet на 24 id клиента).
+
+Для выполения кредитного скоринга клиентов банка необходимо сохранить Dataset данными клинетов в любой директории компьютера и выберите его с помощью формы представленной на сервере.
+
+## Воспроизводимость модели
+
+
+Для обеспечения воспроизводимости сервера на разных устройствах, был собран Docker Image.
+
+Скачать образ сервера c Docker Hub можно командой:
+```
+docker pull kolobovviktor/blending_alpha_bank
+```
+
+Команда для корректного запуска сервера:
+```
+docker run -it --rm --name=server_container -p=8000:8000 blending_alpha_bank
+```
+
+
+
+
 
 ## Выводы
 
@@ -151,8 +194,14 @@ $torow$ и $stat$.
 </span>
 
 ## Структура проекта
-* Images - папка с используемыми изображениями;
-* [Notebook_v13.ipynb](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/master/Notebook_v13.ipynb) - jupyter-ноутбук, содержащий основной код проекта;
+* [PROD server](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/tree/c3145cde389ff71dd62726f81c0aeff6f9ca6c5b/PROD%20server) - каталог с установкой сервера server.py;
+* [data](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/tree/c3145cde389ff71dd62726f81c0aeff6f9ca6c5b/data) - каталог с данными клиентов банка (сокращенный DataSet на 24 id клиента);
+* [img](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/tree/c3145cde389ff71dd62726f81c0aeff6f9ca6c5b/img) - каталог с используемыми изображениями;
+* [part_1_EDA.ipynb](part_1_EDA.ipynb) - jupyter-ноутбук, содержащий код проекта разведовательного анализа данных;
+* [part_2_ML1.ipynb](part_2_ML1.ipynb) - jupyter-ноутбук, содержащий код проекта машинного обучения базовых моделей блендинга;
+* [part_3_ML2.ipynb](part_3_ML2.ipynb) - jupyter-ноутбук, содержащий код проекта машинного обучения метамоделей "первого слоя";
+* [part_4_ML3.ipynb](part_4_ML3.ipynb) - jupyter-ноутбук, содержащий код проекта машинного обучения метамоделей "второго слоя" и результирующей метамодели;
+* [part_5_PROD.ipynb](part_5_PROD.ipynb) - jupyter-ноутбук, содержащий код проекта подготовки модели к продакшену и проверки модели на соревновательном Dataset Kaggle;
 * README.md - краткое описание проекта;
 * optuna_studies.db - результаты оптимизации моделей;
 * requirements.txt - файл используемых библиотек и зависимостей.
@@ -162,9 +211,19 @@ $torow$ и $stat$.
 Используемые библиотеки и зависимости представлены в файле: [requirements.txt](https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank/blob/master/requirements.txt)
 
 ## Установка проекта
-
+Проект:
 ```
 git clone https://github.com/Wiruto/Credit-scoring-of-Alfa-Bank
+```
+
+Образ сервера на Docker Hub:
+```
+docker pull kolobovviktor/blending_alpha_bank
+```
+
+Запуск сервера:
+```
+docker run -it --rm --name=server_container -p=8000:8000 blending_alpha_bank
 ```
 ## Авторы
 
