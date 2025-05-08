@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>blendingClassifier</title>
+    </head>
+    <body>
+      <img src = "static/images/logo.png" alt="drawing" style="width:400px;"><BR>
+      <span style="background-size: 600px;background:White;color:RED;font-size: 30px;font-family: Comic Sans MS">Кредитный скоринг Альфа банка</span><br>
+    </body>
+
+    <span style="background-size: 600px;background:White;font-size: 15px;font-family: Comic Sans MS">
+      <p>Результаты предсказания модели сведены в таблицу.</p>
+    </span>
+
+    <head>
+      <meta charset="utf-8">
+      <title>Таблица</title>
+      <style>
+       th {
+        background: #496791; /* Цвет фона ячеек заголовка */
+        color: #fff; /* Цвет текста */
+        font-size: 15px;
+        font-family: Comic Sans MS;
+       }
+       td { 
+        background: #f5e8d0; /* Цвет фона ячеек */
+        text-align: center; /* Выравниваем по центру */
+        font-size: 15px;
+        font-family: Comic Sans MS;
+       }
+       td, th {
+        padding: 5px 10px; /* Поля в ячейках */
+        vertical-align: center; /* Выравниваем по верхнему краю */
+        font-size: 15px;
+        font-family: Comic Sans MS;
+       }
+      </style>
+     </head>
+     <body>
+      <div style="overflow-x: auto;">
+      <table>
+        <tr>
+          <td>client id</td>
+          {% for row in data.index %}
+          <td>{{ data['id'].iloc[row]}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>predicted class</td>
+          {% for row in data.index %}
+          <td>{{ data['class'].iloc[row]}}</td>
+          {% endfor %}
+        </tr>
+      </table>
+      </div>
+     </body>
+
+     <form action="{{ url_for('home') }}">
+      <p>
+      <button type="submit" style="font-size: 15px;font-family: Comic Sans MS">Сделать новое предсказание</button>
+    </form>
+
+  </html>

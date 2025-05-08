@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>blendingClassifier</title>
+    </head>
+  <body>
+    <img src = "static/images/logo.png" alt="drawing" style="width:400px;"><BR>
+    <span style="background-size: 600px;background:White;color:RED;font-size: 30px;font-family: Comic Sans MS">Кредитный скоринг Альфа банка</span><br>
+    <span style="background-size: 600px;background:White;font-size: 15px;font-family: Comic Sans MS">
+      
+      <p>Для выполения кредитного скоринга клиентов банка необходимо выбрать файл с исходными данными.</p>
+      <p>Исходные данные для предсказания должны быть представлены в табличной форме, описанной в разделе
+        <a href="https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data">Data</a></p>
+      <p>сорeвенования <a href="https://www.kaggle.com/competitions/alfa-bank-pd-credit-history">Kaglle</a> 
+          от Альфа Банка. Таблица с исходными данными должна быть сохранена в формате csv.</p>
+      <p>Пример таблицы для выполнения предсказания можно скачать в разделе 
+        <a href="https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data">Data</a> соревнования.</p>
+      <p>Сохраните файл с исходными данными в любой директории компьютера и выбретите его с помощью формы ниже.</p>
+    </span><br>
+    <form action="" method="post" enctype="multipart/form-data">
+      <p>
+      <label for="name" style="font-size: 15px;font-family: Comic Sans MS">Выберите файл в формате csv:</label>
+      </p>
+      <input type="file" name="datafile" style="font-size: 15px;font-family: Comic Sans MS"/>
+      </p>
+      <button type="submit" style="font-size: 15px;font-family: Comic Sans MS">Сделать предсказание</button>
+    </form>
+  </body>
+
+  </html>
