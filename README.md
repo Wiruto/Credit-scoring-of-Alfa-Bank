@@ -219,8 +219,9 @@ docker pull kolobovviktor/blending_alpha_bank
 ```
 docker run -it --rm --name=server_container -p=8000:8000 blending_alpha_bank
 ```
-## Авторы
+## Автор
 
 * [Колобов Виктор Валерьевич](https://github.com/Wiruto)
+* [Телеграмм автора](https://t.me/wiruto)
 
 
