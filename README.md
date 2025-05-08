@@ -117,8 +117,7 @@ $torow$ и $stat$.
 
 Инструкция включает в себя несколько правил:
 - Сервер должен быть запущен из корневой директори файла server.py;
-- Данные клиентов банка должны быть представлены в табличной форме, описанной в разделе [Data](https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data)
-  [Kaggle сорeвенования от Альфа Банка](https://www.kaggle.com/competitions/alfa-bank-pd-credit-history);
+- Данные клиентов банка должны быть представлены в табличной форме, описанной в разделе [Data](https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data) Kaggle сорeвенования от Альфа Банка;
 - Таблица с данными клиентов банка должна быть сохранена в формате csv.</li>
 
 Dataset c данными клиентов банка можно скачать в разделе [Data](https://www.kaggle.com/competitions/alfa-bank-pd-credit-history/data) 
